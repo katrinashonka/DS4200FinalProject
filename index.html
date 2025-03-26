@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panic Attack Data Analysis</title>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <link
+  href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
+  rel="stylesheet"
+  />
+</head>
+<body>
+
+  <!-- ====== HEADER / NAVBAR ====== -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Panic Attack Data Analysis</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Introduction</a></li>
+        <li><a href="visualizations.html" class="active">Visualizations</a></li>
+        <li><a href="conclusion.html">Conclusion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Analyzing Panic Attack Data:
+        Lifestyle Influences, Potential Triggers, and Symptoms
+      </h1>
+      <p>
+        Panic attacks can be frightening and overwhelming. By studying the factors behind them— 
+        including triggers, lifestyle habits, and symptom patterns—we hope to shed light on 
+        prevention and improved treatment strategies for those affected by anxiety disorders.
+      </p>
+    </div>
+  </section>
+  
+  <!-- ====== MAIN CONTENT ====== -->
+  <main>
+    <!-- ====== INTRODUCTION SECTION ====== -->
+    <section id="introduction" class="section">
+      <h2>Introduction</h2>
+      <p>
+        Welcome to our project analyzing panic attack data. 
+        This website explores how lifestyle factors, potential triggers, 
+        and symptoms may relate to panic attacks. Our tasks include:
+      </p>
+      <ul>
+        <li>Investigating lifestyle influences (caffeine, sleep, exercise, etc.)</li>
+        <li>Examining potential triggers (stress, phobias, social anxiety, etc.)</li>
+        <li>Exploring symptom severity and frequency</li>
+        <li>Creating interactive visualizations to help interpret the data</li>
+      </ul>
+      <p>
+        Through these tasks, we aim to discover patterns and insights that can 
+        inform better prevention and treatment strategies.
+      </p>
+    </section>
+
+    <!-- ====== DATA SECTION ====== -->
+    <section id="data" class="section">
+      <h2>About the Data</h2>
+      <p>
+        Our dataset, “Panic Attack Dataset”, is publicly available on Kaggle 
+        and can be downloaded as a 94.66 kB CSV file. It contains 1,200 rows 
+        and 21 attributes, including:
+      </p>
+      <ul>
+        <li><strong>ID</strong> – Unique identifier</li>
+        <li><strong>Age</strong> – Age of the individual</li>
+        <li><strong>Gender</strong> – Male, Female, Non-binary</li>
+        <li><strong>Panic_Attack_Frequency</strong> – Number of panic attacks per month</li>
+        <li><strong>Duration_Minutes</strong> – Average duration of panic attack (minutes)</li>
+        <li><strong>Trigger</strong> – Main trigger (stress, social anxiety, phobia, etc.)</li>
+        <li><strong>Heart_Rate</strong> – Heart rate during a panic attack (bpm)</li>
+        <li><strong>Sweating</strong> – Yes/No</li>
+        <li><strong>Shortness_of_Breath</strong> – Yes/No</li>
+        <li><strong>Dizziness</strong> – Yes/No</li>
+        <li><strong>Chest_Pain</strong> – Yes/No</li>
+        <li><strong>Trembling</strong> – Yes/No</li>
+        <li><strong>Medical_History</strong> – Pre-existing conditions (Anxiety, Depression, PTSD)</li>
+        <li><strong>Medication</strong> – Taking medication for anxiety (Yes/No)</li>
+        <li><strong>Caffeine_Intake</strong> – Cups of coffee/tea per day</li>
+        <li><strong>Exercise_Frequency</strong> – Days of exercise per week</li>
+        <li><strong>Sleep_Hours</strong> – Average sleep hours per night</li>
+        <li><strong>Alcohol_Consumption</strong> – Drinks per week</li>
+        <li><strong>Smoking</strong> – Smoker (Yes/No)</li>
+        <li><strong>Therapy</strong> – Attending therapy (Yes/No)</li>
+        <li><strong>Panic_Score</strong> – Severity score (1-10)</li>
+      </ul>
+    </section>
+
+    <!-- ====== REFERENCES SECTION ====== -->
+    <section id="references" class="section">
+      <h2>References</h2>
+      <ul>
+        <li>
+          <a href="https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms" target="_blank">
+            Overview of Panic Disorder (NIH)
+          </a>
+        </li>
+        <li>
+          <a href="https://doi.org/10.1590/S1806-37132009000700012" target="_blank">
+            Respiratory Manifestations of Panic Disorder
+          </a>
+        </li>
+      </ul>
+    </section>
+
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p> DS4200 Final Project </p>
+  </footer>
+
+  <!-- Link to JavaScript -->
+  <script src="script.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="symptoms.js"></script>
+  
+</body>
+</html>

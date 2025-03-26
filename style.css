@@ -1,0 +1,126 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  background-color: #004b8d; 
+  padding: 1rem 2rem;
+}
+
+body, h1, h2, h3 {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600; 
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+p, li {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;                 
+  margin-bottom: .5rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Section Styling */
+.section {
+  padding: 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  margin-bottom: 1.5rem;
+  color: #004b8d;
+}
+
+.section p, .section ul {
+  margin-bottom: .3rem;
+}
+
+/* Visualization Container Styling */
+.viz-container {
+  margin-bottom: 2rem;
+}
+
+.viz-placeholder {
+  background-color: #e2e8f0; 
+  border: 1px dashed #ccc;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.hero {
+  background-color: #d7e9ff;
+  padding: 1rem;         
+  text-align: left;      
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;       
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  max-width: 1100px;
+  font-weight: 600;
+  color: #004b8d;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  max-width: 1100px;
+  margin-bottom: 1rem;
+}
+
+
+footer {
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: #eaeaea;
+  color: #333;
+}
