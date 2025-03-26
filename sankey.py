@@ -60,7 +60,7 @@ def show_sankey(df, src, targ, vals=None, **kwargs):
     fig = make_sankey(df, src, targ, vals, **kwargs)
     fig.show()
 
-def main:
+def main():
     pass
 
 if __name__ == '__main__':
