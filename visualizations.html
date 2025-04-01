@@ -42,15 +42,19 @@
       </p>
 
       <!-- Visualization 1: D3 -->
-      <div class="viz-container" id="viz1">
-        <h3>1. Stacked Bar Chart of Yes/No Symptoms (D3.js)</h3>
-        <p>
-          This chart shows the frequency of panic attack symptoms reported as 
-          Yes or No. The categories are sorted by how commonly they are reported.
-        </p>
-        <div id="barplot"></div> 
-      </div>
+  <div class="viz-container" id="viz1">
+    <h3>1. Age Histogram with Gender Filter (D3.js)</h3>
+      <p>This chart shows the age distribution of participants, and you can filter by gender.</p>
 
+  <!-- Gender Filter Dropdown -->
+    <label for="genderFilter">Select Gender:</label>
+      <select id="genderFilter">
+       <option value="0">Female</option>
+        <option value="1">Male</option>
+      </select>
+
+      <div id="histogram"></div>
+  </div>
 
       <div class="viz-container">
         <h3>2. Grouped Bar Chart: Therapy/Medication Impact</h3>
@@ -159,6 +163,6 @@
   
   <!-- dependencies (D3, etc.) -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="symptoms.js"></script>
+  <script src="demographics.js"></script>
 </body>
 </html>
