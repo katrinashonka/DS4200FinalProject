@@ -117,6 +117,43 @@ p, li {
   margin-bottom: 1rem;
 }
 
+.viz-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.viz-chart {
+  flex: 2;
+}
+
+.viz-description {
+  flex: 1;
+  max-width: 400px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.viz-takeaway {
+  max-width: 900px;
+  margin: 1.5rem auto 0 auto;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.viz-takeaway h4 {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: #004b8d;
+}
+
+.viz-info {
+  flex: 1;
+  max-width: 400px;
+}
+
 
 footer {
   text-align: center;
