@@ -21,13 +21,15 @@ body, h1, h2, h3 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.75rem;
   margin-bottom: 1rem;
 }
 
 
+
 p, li {
   font-family: "Nunito", sans-serif;
+  font-size: 1.75rem;
   font-weight: 400;                 
   margin-bottom: .5rem;
   color: #333;
@@ -42,7 +44,7 @@ p, li {
 
 .logo h1 {
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 2.5rem;
   margin: 0;
 }
 
@@ -71,6 +73,7 @@ p, li {
 
 .section h2 {
   margin-bottom: 1.5rem;
+  font-size: 2rem;
   color: #004b8d;
 }
 
@@ -104,7 +107,7 @@ p, li {
 }
 
 .hero-content h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   max-width: 1100px;
   font-weight: 600;
   color: #004b8d;
@@ -112,10 +115,18 @@ p, li {
 }
 
 .hero-content p {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   max-width: 1100px;
   margin-bottom: 1rem;
 }
+
+.hero-content h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #004b8d;
+  margin-bottom: 1rem;
+}
+
 
 .viz-flex {
   display: flex;
@@ -128,10 +139,16 @@ p, li {
   flex: 2;
 }
 
+.viz-container h3 {
+  font-size: 2rem;
+  color: #004b8d; 
+}
+
+
 .viz-description {
   flex: 1;
   max-width: 400px;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -144,7 +161,7 @@ p, li {
 
 .viz-takeaway h4 {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   margin-bottom: 0.75rem;
   color: #004b8d;
 }
