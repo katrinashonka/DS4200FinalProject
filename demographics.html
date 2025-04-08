@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Histogram with Gender Filter</title>
+
+    <!-- Link to Google Fonts for Roboto Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Age Histogram</h1>
+    
+    <!-- Gender Filter Dropdown -->
+    <label for="genderFilter">Select Gender:</label>
+    <select id="genderFilter">
+        <option value="0">Female</option>
+        <option value="1">Male</option>
+    </select>
+    
+    <div id="histogram"></div>
+
+    <!-- Load D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Link to external JavaScript file -->
+    <script src="demographics.js"></script>
+</body>
+</html>
