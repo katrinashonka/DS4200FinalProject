@@ -28,15 +28,15 @@ d3.csv("Cleaned_Panic_Dataset.csv").then(function(data) {
         // Create the histogram generator
         const histogram = d3.histogram()
             .value(d => d.Age)  // Age is the variable to bin
-            .domain([0, d3.max(filteredData, d => d.Age)])  // Set domain from 0 to max Age value
-            .thresholds(20);  // Number of bins
+            .domain([15, d3.max(filteredData, d => d.Age)])  // Set domain from 0 to max Age value
+            .thresholds(40);  // Number of bins
 
         // Generate bins
         const bins = histogram(filteredData);
 
         // Create the x scale based on the bins
         const x = d3.scaleLinear()
-            .domain([0, d3.max(filteredData, d => d.Age)])
+            .domain([15, d3.max(filteredData, d => d.Age)])
             .range([0, width]);
 
         // Create the y scale based on the bin count
@@ -69,6 +69,58 @@ d3.csv("Cleaned_Panic_Dataset.csv").then(function(data) {
             .attr("width", d => x(d.x1) - x(d.x0) - 1)
             .attr("height", d => height - y(d.length))
             .attr("fill", "#89CFF0");
+        
+        // Kernel Density Estimation function
+function kernelDensityEstimator(kernel, xValues) {
+    return function(sample) {
+        return xValues.map(function(x) {
+            return {x: x, y: d3.mean(sample, function(v) { return kernel(x - v); })};
+        });
+    };
+}
+
+function kernelEpanechnikov(k) {
+    return function(v) {
+        return Math.abs(v /= k) <= 1 ? 0.75 * (1 - v * v) / k : 0;
+    };
+}
+
+// Generate x values across the histogram range
+const kdeX = d3.range(15, d3.max(filteredData, d => d.Age), 0.5);
+
+// Compute density values
+const kde = kernelDensityEstimator(kernelEpanechnikov(3), kdeX);
+const density = kde(filteredData.map(d => d.Age));
+
+// Create y scale for density if needed
+const yDensity = d3.scaleLinear()
+    .domain([0, d3.max([...bins.map(d => d.length), ...density.map(d => d.y)])])
+    .nice()
+    .range([height, 0]);
+
+// Scale KDE to match histogram bin heights based on total count and bin width
+const totalCount = filteredData.length;
+const binWidth = bins[0].x1 - bins[0].x0;
+
+density.forEach(d => {
+    d.y = d.y * totalCount * binWidth;
+});
+
+
+// Draw the density line
+svg.append("path")
+    .datum(density)
+    .attr("fill", "none")
+    .attr("stroke", "#1f77b4")
+    .attr("stroke-width", 2)
+    .attr("class", "density-line")
+    .attr("d", d3.line()
+        .curve(d3.curveBasis)
+        .x(d => x(d.x))
+        .y(d => y(d.y)) // now this is scaled to match histogram height
+    );
+
+
 
         // Add axis labels with Roboto Mono font
         svg.append("text")
