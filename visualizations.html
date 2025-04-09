@@ -72,8 +72,106 @@
   </div>
 </div>
 
-<div class="viz-container">
-  <h3>2. Grouped Bar Chart: Therapy/Medication Impact</h3>
+      <!-- Visualization 4:  Dot Plot -->
+      <div class="viz-container">
+        <h3>2. Treemap of Symptoms and Lifestyle Factors by Panic Attack Severity (Altair) </h3>
+        <p>
+          An interactive treemap which visualizes the relationship between panic attack severity and lifestyle factors and symptoms. 
+        </p>
+        <iframe 
+          src="treemap_panic_severity.html" 
+          width="900" 
+          height="600" 
+          style="border: none;">
+          </iframe>
+      </div>
+            <div class="viz-info">
+  <div class="viz-takeaway">
+    <h4>Takeaway:</h4>
+  </div>
+    <div class="viz-description">
+      <p>
+This visualization gives us our highest level view of the relationships between lifestyle choices and symptoms with how severe they reported their panic attacks to be. For each lifestyle and symptom we display the count of “low”, “medium” and “high” panic attack severities as well as the percentage of the severity for the whole category. We also counted specific severities broken down to prevalence of lifestyle choices also categorized into “low”, “medium” and “high”. 
+    </div>
+  </div>
+</div>
+      <div class="viz-container">
+        <h3>3. Feature Importance for Predicting Panic Attack Severity (Python) </h3>
+        <p>
+          A bar chart visualizing what features are most important in predicting panic attack severity. 
+        </p>
+          <iframe 
+          src="feature_importance.png" 
+          width="900" 
+          height="600" 
+          style="border: none;">
+          </iframe>
+      </div>
+      
+      <div class="viz-info">
+  <div class="viz-takeaway">
+    <h4>Takeaway:</h4>
+  </div>
+    <div class="viz-description">
+      <p>
+To identify which lifestyle choices and physiological factors contribute the most to the severity of panic attacks, we trained a Random Forest model using preprocessed data from our dataset. Features such as heart rate, sleep hours, alcohol consumption, exercise frequency, and caffeine intake were scaled and used to predict the target variable, Panic_Score, which we categorized into “Low,” “Medium,” and “High” severity. The model revealed that heart rate and sleep hours were by far the most important features for predicting panic severity. This suggests that elevated heart rate and sleep deprivation played the most crucial roles in the severity of panic attacks. This insight serves as a reminder to users that sleep and heart rate are important metrics to monitor, and if necessary inform future lifestyle adjustments as to improve overall wellness.
+    </div>
+  </div>
+</div>
+
+      
+      <div class="viz-container">
+        <h3>4. Histogram of Panic Duration Distribution by Trigger (Altair)</h3>
+        <p>
+          An interactive historgram chart to visualize the relationship between panic attack 
+          severity and duration by trigger. Toggle the dropdown menu to select different triggers. 
+        </p>
+        <iframe 
+          src="panic_duration_by_trigger.html" 
+          width="900" 
+          height="600" 
+          style="border: none;">
+          </iframe>
+          <p>
+    
+          </p>
+        </div>
+      </div>
+            
+      <div class="viz-info">
+  <div class="viz-takeaway">
+    <h4>Takeaway:</h4>
+  </div>
+    <div class="viz-description">
+      <p>
+This histogram shows the distribution of the lengths in minutes of panic attacks of different severity levels (low, medium, and high). The first view of the visualization includes all panic attacks in the dataset, but the user can filter to only see panic attacks caused by a particular trigger. Most panic attacks of all three severity levels last approximately 16-28 minutes, with attacks with shorter and longer durations being slightly less common. However, there is a very high number of highly severe panic attacks that lasted 42-44 minutes, the longest recorded amount of time. This indicates that very long panic attacks are likely to be more severe. Many of these patterns hold true when filtering the data by a particular trigger. 
+    </div>
+  </div>
+</div>
+        
+      <div class="viz-container">
+        <h3>5. Stacked Bar Chart Panic Severity by Heart Rate (Altair)</h3>
+        <p>
+          This stacked bar chart to visualize the relationship between panic attack severity and heart rate.
+        </p>
+        <iframe 
+          src="stacked_bar_panic_severity.html" 
+          width="1000" 
+          height="800" 
+          style="border: none;">
+          </iframe>
+        </div>
+      </div>
+        </div>
+    <div class="viz-description">
+      <p>
+This visualization gives us our highest level view of the relationships between lifestyle choices and symptoms with how severe they reported their panic attacks to be. For each lifestyle and symptom we display the count of “low”, “medium” and “high” panic attack severities as well as the percentage of the severity for the whole category. We also counted specific severities broken down to prevalence of lifestyle choices also categorized into “low”, “medium” and “high”. 
+    </div>
+  </div>
+</div>
+
+      <div class="viz-container">
+  <h3>6. Grouped Bar Chart: Therapy/Medication Impact</h3>
   <p>
     This chart compares different combinations of therapy and medication
     on panic severity levels (Low, Medium, High).
@@ -94,77 +192,12 @@
       </div>
       <div class="viz-description">
     <p>
-     This grouped bar chart is a static plot that divides the patients in the dataset based on which therapeutic interventions they have received. The counts of patients who experience low, medium, and high-severity panic attacks within each therapeutic intervention group are shown. In all four groups, the high-severity panic attacks are always the most frequent type of attack, regardless of whether patients are having therapy, medication, both, or neither. Interestingly, patients who are taking medication (regardless of whether they also have therapy) have significantly lower numbers (20 to 30) of patients with highly severe panic attacks. Furthermore, patients who are taking medication and have therapy had lower counts across all three severity groups; this suggests that combining medication and therapy is effective in reducing panic attacks of all severities. This provides more evidence to suggest that medication significantly reduces the risk of highly severe panic attacks, but that when used in conjunction with therapy, it is even more effective at reducing all types of panic attacks. 
+ The Random Forest model identified Heart Rate as the most important predictor of panic attack severity. To explore this relationship, we created a stacked bar chart representing the count of panic attacks within defined heart rate ranges and grouped by panic severity. The chart shows that across nearly all heart rate intervals, higher heart rates are associated with high severity panic attacks, with particularly steep increases in the 100-120 bpm and 140-160 bpm bins. This supports the models conclusions and emphasizes that elevated heart rate serves as a physiological warning sign for more severe panic responses.
     </p>
 </div>
     </div>
   </div>
 </div>
-
-      <!-- Visualization 3: Scatterplot (D3) -->
-      <div class="viz-container">
-        <h3>3. Normalized Stacked Bar Chart (Altair) - Panic Severity</h3>
-        <p>
-          An interactive normalized stacked bar chart to visualize the relationship between panic attack 
-          severity and symptoms and lifestyle factors.
-        </p>
-        <iframe 
-          src="panic_duration_by_trigger.html" 
-          width="900" 
-          height="600" 
-          style="border: none;">
-          </iframe>
-          <p>
-    
-          </p>
-        </div>
-      </div>
-      
-        <!-- Visualization 4: Stacked Bar Chart (D3) -->
-      <div class="viz-container">
-        <h3>4. Stacked Bar Chart (Altair) - Panic Severity</h3>
-        <p>
-          An interactive stacked bar chart to visualize the relationship between panic attack 
-          severity and symptoms and lifestyle factors.
-        </p>
-        <iframe 
-          src="stacked_bar_panic_severity.html" 
-          width="900" 
-          height="600" 
-          style="border: none;">
-          </iframe>
-        </div>
-      </div>
-
-      <!-- Visualization 4:  Dot Plot -->
-      <div class="viz-container">
-        <h3>5. Dot Plot With Filter (Altair) - Sleep Hours vs Panic Score</h3>
-        <p>
-          This chart allows you to interactively explore the effect of sleep on the severity of panic attacks. 
-        </p>
-        <iframe 
-          src="treemap_panic_severity.html" 
-          width="900" 
-          height="600" 
-          style="border: none;">
-          </iframe>
-      </div>
-      
-      <!-- Visualization 5: Heatmap -->
-      <div class="viz-container">
-        <h3>6. Heatmap (Python) - Lifestyle Factors vs. Panic Severity</h3>
-        <p>
-          A correlation heatmap to explore relationships between continuous variables 
-          such as caffeine intake, sleep, alcohol intake, heart rate, and exercise frequency 
-          with panic severity score.
-        </p>
-          <iframe 
-          src="feature_importance.png" 
-          width="900" 
-          height="600" 
-          style="border: none;">
-          </iframe>
-      </div>
 </section>
 
   <footer>
