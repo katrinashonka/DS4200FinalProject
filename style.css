@@ -20,6 +20,13 @@ body, h1, h2, h3 {
   line-height: 1.5;
 }
 
+h4 {
+  font-size: 1.7rem;
+  margin-top: 1.5rem;
+  margin-bottom: .75rem;
+  max-width: 800;
+}
+
 h1 {
   font-size: 2.75rem;
   margin-bottom: 1rem;
@@ -138,7 +145,10 @@ p, li {
 
 .viz-chart {
   flex: 2;
+  min-width: 1000px;
+  min-height: 600px;
 }
+
 
 .viz-container h3 {
   font-size: 2rem;

@@ -1,7 +1,7 @@
 // Set up the dimensions for the histogram
 const margin = { top: 20, right: 30, bottom: 40, left: 40 };
-const width = 800 - margin.left - margin.right;
-const height = 400 - margin.top - margin.bottom;
+const width = 1000 - margin.left - margin.right;
+const height = 800 - margin.top - margin.bottom;
 
 // Create the SVG container for the histogram
 const svg = d3.select("#histogram")
