@@ -17,7 +17,7 @@ d3.csv("Cleaned_Panic_Dataset.csv").then(function(data) {
     // Convert necessary columns to numbers
     data.forEach(function(d) {
         d.Age = +d.Age;
-        d.Gender = +d.Gender; // Ensure Gender is numeric
+        d.Gender = +d.Gender; 
     });
 
     // Create a function to update the histogram when the filter is changed
@@ -42,7 +42,7 @@ d3.csv("Cleaned_Panic_Dataset.csv").then(function(data) {
         // Create the y scale based on the bin count
         const y = d3.scaleLinear()
             .domain([0, d3.max(bins, d => d.length)])
-            .nice()
+            .nice() // Rounds to more human-friendly numbers
             .range([height, 0]);
 
         // Clear the SVG container before redrawing
@@ -70,7 +70,7 @@ d3.csv("Cleaned_Panic_Dataset.csv").then(function(data) {
             .attr("height", d => height - y(d.length))
             .attr("fill", "#89CFF0");
         
-        // Kernel Density Estimation function
+// Kernel Density Estimation function (looked up functionality)
 function kernelDensityEstimator(kernel, xValues) {
     return function(sample) {
         return xValues.map(function(x) {
@@ -79,6 +79,7 @@ function kernelDensityEstimator(kernel, xValues) {
     };
 }
 
+// Assigns weights within bandwidth k 
 function kernelEpanechnikov(k) {
     return function(v) {
         return Math.abs(v /= k) <= 1 ? 0.75 * (1 - v * v) / k : 0;
@@ -88,7 +89,7 @@ function kernelEpanechnikov(k) {
 // Generate x values across the histogram range
 const kdeX = d3.range(15, d3.max(filteredData, d => d.Age), 0.5);
 
-// Compute density values
+// Compute density values 
 const kde = kernelDensityEstimator(kernelEpanechnikov(3), kdeX);
 const density = kde(filteredData.map(d => d.Age));
 
@@ -117,10 +118,8 @@ svg.append("path")
     .attr("d", d3.line()
         .curve(d3.curveBasis)
         .x(d => x(d.x))
-        .y(d => y(d.y)) // now this is scaled to match histogram height
+        .y(d => y(d.y)) 
     );
-
-
 
         // Add axis labels with Roboto Mono font
         svg.append("text")
