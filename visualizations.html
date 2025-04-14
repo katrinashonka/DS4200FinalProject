@@ -131,12 +131,11 @@ This histogram shows the distribution of the lengths in minutes of panic attacks
         <p>
           A bar chart visualizing what features are most important in predicting panic attack severity. 
         </p>
-          <iframe 
-          src="feature_importance.png" 
-          width="1000" 
-          height="600" 
-          style="border: none;">
-          </iframe>
+          <img
+          src="feature_importance.png"
+          alt="Feature Importance"
+          style="width: 1000px; height: auto; border: none;"
+          />
       </div>
       
       <div class="viz-info">
@@ -175,6 +174,32 @@ To identify which lifestyle choices and physiological factors contribute the mos
     </div>
   </div>
 </div>
+
+<div class="viz-container">
+  <h3>Interactive Scatterplot: Duration vs. Heart Rate & Panic Attack Severity</h3>
+  <p>
+          These scatterplots allow you to interactively explore the relationships between heart rate, duration, and panic attack score.
+        </p>
+  <iframe src="scatterplot.html" width="1200" height="700" style="border: none;"></iframe>
+   </div>
+      </div>
+        </div>
+  <div class="viz-info">
+      <div class="viz-takeaway">
+        <h4>Takeaway:</h4>
+      </div>
+      <div class="viz-description">
+      <p>
+    The first scatterplot on the left demonstrates the relationship between panic attack duration and heart rate. This plot is interactive:
+    you can select a range on the x-axis (duration) and then view the corresponding panic attack severity (Panic_Score) on the right chart.
+    Despite the interactive filtering, the points are uniformly distributed, indicating that heart rate remains between 80 and 160 BPM for panic
+    attacks lasting between 5 and 45 minutes, and the severity ratings are evenly spread across the duration range.
+  </p>
+ </div>
+  </div>
+</div>
+
+
 
       <div class="viz-container">
   <h3>Grouped Bar Chart: Therapy/Medication Impact</h3>
